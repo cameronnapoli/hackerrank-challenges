@@ -1,4 +1,4 @@
-# Python code to strip URL Parameters
+# Python code to strip repetitive URL Parameters
 
 def strip_url_params(url, params_to_strip = []):
     pos = url.find("?")
@@ -18,7 +18,7 @@ def strip_url_params(url, params_to_strip = []):
         return url[:pos] + "?" + reconstructedParams[:-1]
     else:
         return url
-    
+
 
 print(strip_url_params('www.codewars.com?a=1&b=2&a=2')) # returns 'www.codewars.com?a=1&b=2'
 print(strip_url_params('www.codewars.com?a=1&b=2&a=2', ['b'])) # returns 'www.codewars.com?a=1'

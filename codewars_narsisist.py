@@ -1,3 +1,7 @@
+# narcissist function simply takes each digit, takes it to the power
+# of the length of the number (number of digits) and sums all
+# of those resulting values
+
 def narcissistic(value):
     sum = 0
     for digit in list(map(lambda x: int(x), str(value))):

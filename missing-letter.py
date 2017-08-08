@@ -11,6 +11,8 @@
 #
 # I have also created other katas. Take a look if you enjoyed this kata!
 
+
+# finds the missing letter in increasing order in an array
 def find_missing_letter(chars):
     current = ord(chars[0])
     for c in chars[1:]:

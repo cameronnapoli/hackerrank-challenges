@@ -9,6 +9,7 @@ class Btree:
 t1 = Btree(5, Btree(3,Btree(2),Btree(4)), Btree(7,Btree(6),Btree(8))) # valid
 t2 = Btree(5, Btree(6), Btree(4)) # invalid
 
+# checks if the binary tree, is a valid binary search tree
 def isValidBST(btree):
     # If empty node hit return true
     if btree == None:

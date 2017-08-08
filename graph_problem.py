@@ -1,6 +1,8 @@
 #!/bin/python3
 import sys
 
+# algorithm to check if a node is part of a triangle in an
+# adjacency matrix graph
 def nodeInTriangle(row, col, g):
     gLen = len(g)
     rowSearch = range((row-1) if (row-1>=0) else row, (row+2) if (row+1 < gLen) else (row+1))

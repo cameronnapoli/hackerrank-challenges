@@ -16,6 +16,7 @@
 
 import sys
 
+# generates all possible passwords satisfying the conditions above
 def allPossibleMelodius(n, isVowel):
     vowels = "aeiou"
     consonants = "bcdfghjklmnpqrstvwxz"

@@ -1,5 +1,6 @@
 # Generate a list of lists containing pascals triangle
 
+# generate a pascals triangle of size n
 def pascal(p):
     soln = []
     for i in range(1,p+1):
@@ -12,3 +13,5 @@ def pascal(p):
                 next.append(prev[i] + prev[i+1])
             soln.append(next)
     return soln
+
+assert pascal(3) == [[1], [1, 1], [1, 2, 1]]
