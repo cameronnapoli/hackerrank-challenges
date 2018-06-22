@@ -1,3 +1,7 @@
+// Written by: Cameron Napoli
+// Problem found on hackerrank.com at:
+//    https://www.hackerrank.com/challenges/grading/problem
+
 #include <bits/stdc++.h>
 
 using namespace std;
