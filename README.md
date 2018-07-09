@@ -1,7 +1,5 @@
 # Solved HackerRank Coding Challenges
 
-This is a collection of hackerrank and codewars challenges solved using Python and JavaScript.
-
-Questions and solutions can be found in each source code file.
+This repository contains collection of HackerRank challenges solved using Python, JavaScript, and C++. Questions and solutions can be found in each source file.
 
 [HackerRank Website](https://www.hackerrank.com/)
