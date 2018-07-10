@@ -1,3 +1,5 @@
+# Written by: Cameron Napoli
+
 # is valid BST
 
 class Btree:

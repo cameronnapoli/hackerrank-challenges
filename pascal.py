@@ -1,3 +1,5 @@
+# Written by: Cameron Napoli
+
 # Generate a list of lists containing pascals triangle
 
 # generate a pascals triangle of size n

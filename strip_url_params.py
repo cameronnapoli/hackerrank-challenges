@@ -1,3 +1,5 @@
+# Written by: Cameron Napoli
+
 # Python code to strip repetitive URL Parameters
 
 def strip_url_params(url, params_to_strip = []):

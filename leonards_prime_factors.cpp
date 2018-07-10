@@ -1,21 +1,6 @@
-/*
-Leonardo loves primes and created  queries where each query takes the form of an integer, . For each , he wants you to count the maximum number of unique prime factors of any number in the inclusive range  and then print this value on a new line.
-
-Note: Recall that a prime number is only divisible by  and itself, and  is not a prime number.
-
-Input Format
-
-The first line contains an integer, , denoting the number of queries.
-Each line  of the  subsequent lines contains a single integer, .
-
-Constraints
-
-
-
-Output Format
-
-For each query, print the maximum number of unique prime factors for any number in the inclusive range  on a new line.
-*/
+// Written by: Cameron Napoli
+// Problem found on hackerrank.com at:
+//     https://www.hackerrank.com/challenges/leonardo-and-prime/problem
 
 #include <cmath>
 #include <cstdio>

@@ -1,3 +1,5 @@
+# Written by: Cameron Napoli
+
 #!/bin/python3
 import sys
 

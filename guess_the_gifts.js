@@ -1,7 +1,12 @@
-/*
-You will be given a wishlist (array), containing all possible items. Each item is in the format: {name: "toy car", size: "medium", clatters: "a bit", weight: "medium"} (Ruby version has an analog hash structure, see example below)
+// Written by: Cameron Napoli
 
-You also get a list of presents (array), you see under the christmas tree, which have the following format each: {size: "small", clatters: "no", weight: "light"}
+/*
+You will be given a wishlist (array), containing all possible items.
+Each item is in the format: {name: "toy car", size: "medium", clatters: "a bit", weight: "medium"}
+(Ruby version has an analog hash structure, see example below)
+
+You also get a list of presents (array), you see under the christmas tree,
+which have the following format each: {size: "small", clatters: "no", weight: "light"}
 
 Your task is to create a list of all possible presents you might get.
 */

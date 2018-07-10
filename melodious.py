@@ -1,18 +1,7 @@
-# Jeremy and Clara are learning about passwords and created a game to test their "hacking" skills. Jeremy made rules for valid passwords and Clara needs to write a program to generate all possible passwords that meet those rules. Jeremy's rules are these:
-#
-# - a password consists of exactly  lowercase English letters.
-# - the password is melodious, meaning that consonants can only be next to vowels and vowels can only be next to consonants. Example: bawahaha
-# - the password cannot contain the letter  (because it's both a consonant and vowel).
-# - the first letter of the password can be either a vowel or consonant.
-# image
-#
-# Given the length, , of the password, print all of the possible passwords that meet the conditions above.
-#
-# Input Format
-#
-# The line of input contains the integer  (the length of the password).
+# Written by: Cameron Napoli
+# Problem found on hackerrank.com at:
+#     https://www.hackerrank.com/contests/w30/challenges/melodious-password
 
-#!/bin/python3
 
 import sys
 

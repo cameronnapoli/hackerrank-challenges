@@ -1,3 +1,5 @@
+# Written by: Cameron Napoli
+
 # narcissist function simply takes each digit, takes it to the power
 # of the length of the number (number of digits) and sums all
 # of those resulting values

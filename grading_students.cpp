@@ -9,11 +9,9 @@ using namespace std;
 int roundUpGrade(int grade) {
     if (grade < 38) {
         return grade;
-    }
-    if ((5 - grade % 5) < 3) {
+    } if ((5 - grade % 5) < 3) {
         return grade - (grade % 5) + 5;
-    }
-    return grade;
+    } return grade;
 }
 
 /*
@@ -25,16 +23,14 @@ vector<int> gradingStudents(vector<int> grades) {
      */
     for (int i = 0; i < grades.size(); i++) {
         grades[i] = roundUpGrade(grades[i]);
-    }
-    return grades;
+    } return grades;
 }
 
 int main()
 {
     ofstream fout(getenv("OUTPUT_PATH"));
 
-    int n;
-    cin >> n;
+    int n; cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     vector<int> grades(n);
@@ -58,8 +54,6 @@ int main()
     }
 
     fout << "\n";
-
     fout.close();
-
     return 0;
 }
