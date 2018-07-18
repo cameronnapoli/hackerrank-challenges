@@ -1,15 +1,16 @@
+package com.company;
+
 // Written by: Cameron Napoli
 // 2018-07-18
 // Problem found on hackerrank.com at:
 //     https://www.hackerrank.com/challenges/two-two/problem
 
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.math.*;
+import java.text.*;
+import java.util.*;
+import java.util.regex.*;
 import java.math.BigInteger;
-import java.io.File;
-import java.util.Scanner;
-
 
 class Trie {
 
@@ -82,23 +83,20 @@ class Trie {
     }
 }
 
-
 public class Main {
+
     public static Trie generateTrie(int nLower, int nUpper) {
         Trie ntRoot = new Trie();
         BigInteger two = BigInteger.valueOf(2);
         for (int i = nLower; i <= nUpper; i++) {
             String resStr = two.pow(i).toString();
-            System.out.println("resStr.length(): " + resStr.length()); // 242
             ntRoot.insert(resStr);
         }
         return ntRoot;
     }
 
-    public static int twoTwo(String inp) {
+    public static int twoTwo(Trie ntRoot, String inp) {
         // TODO: Scan string for bad alphabet characters
-
-        Trie ntRoot = generateTrie(0, 800);
 
         int maxLen = BigInteger.valueOf(2).pow(800).toString().length();
 
@@ -121,24 +119,24 @@ public class Main {
         } return b;
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
-        long startTime = System.nanoTime();
-        String inp = "8192749812";
+    private static final Scanner scanner = new Scanner(System.in);
 
-        File file = new File("C:\\Users\\cnapoli\\Documents\\Code\\hackerrank-challenges\\twotwo_test.txt");
-        Scanner sc = new Scanner(file);
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        while (sc.hasNextLine()) {
-            inp = sc.nextLine();
-            System.out.println(inp.substring(0, 50) + " ...");
+        int t = Integer.parseInt(scanner.nextLine().trim());
+
+        Trie ntRoot = generateTrie(0, 800);
+
+        for (int tItr = 0; tItr < t; tItr++) {
+            String a = scanner.nextLine();
+
+            int result = twoTwo(ntRoot, a);
+
+            bufferedWriter.write(String.valueOf(result));
+            bufferedWriter.newLine();
         }
 
-        int res = twoTwo(inp);
-        System.out.println("Result: " + res);
-        System.out.println("");
-
-        long endTime   = System.nanoTime();
-        long totalTime = endTime - startTime;
-        System.out.println(totalTime / 1000000.0 + "ms");
+        bufferedWriter.close();
     }
 }
