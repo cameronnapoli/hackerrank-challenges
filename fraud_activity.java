@@ -10,6 +10,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
+
 class IndexSpan {
     private Integer key;
     private Integer index;
@@ -33,6 +34,7 @@ class IndexSpan {
     }
 }
 
+
 class MedianStructure {
     // NOTE: values will function as a queue
     private ArrayList<Integer> values;
@@ -42,9 +44,6 @@ class MedianStructure {
     public MedianStructure(int d) {
         values = new ArrayList<Integer>();
         freq = new HashMap<Integer, Integer>();
-        for (int k = 0; k <= 200; k++) {
-            freq.put(k, 0);
-        }
         trailLen = d;
     }
     public void insert(int v) {
@@ -56,9 +55,16 @@ class MedianStructure {
         if (values.size() == trailLen) {
             int removedKey = values.remove(0);
             freq.put(removedKey, freq.get(removedKey) - 1);
+            if (freq.get(removedKey) == 0) {
+                freq.remove(removedKey);
+            }
         }
 
-        freq.put(v, freq.get(v) + 1);
+        if (freq.get(v) == null) {
+            freq.put(v, 1);
+        } else {
+            freq.put(v, freq.get(v) + 1);
+        }
         values.add(v);
     }
     private static float avg(int a, int b) {
@@ -108,6 +114,7 @@ class MedianStructure {
         return prevSpan.getKey();
     }
 }
+
 
 public class Solution {
 
