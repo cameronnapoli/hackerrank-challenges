@@ -48,7 +48,8 @@ class MedianStructure {
     }
     public void insert(int v) {
         if (values.size() > trailLen) {
-            throw new ArrayIndexOutOfBoundsException("Somehow values got too big! values.size(): " + values.size() + ", trailLen: " + trailLen);
+            throw new ArrayIndexOutOfBoundsException("Somehow values got too big! values.size(): "
+                    + values.size() + ", trailLen: " + trailLen);
         }
 
         // Remove element from queue if size gets too big
