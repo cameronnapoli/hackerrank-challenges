@@ -1,6 +1,7 @@
+#!/bin/python3
+
 # Written by: Cameron Napoli
 
-#!/bin/python3
 import sys
 
 # algorithm to check if a node is part of a triangle in an
